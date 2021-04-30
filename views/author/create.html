@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- file: views/author/create.html -->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>{{title}}</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/skeleton.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="eleven column" style="margin-top: 10%">
+                <h2>{{title}}</h2>
+                <form action="/author" method="post">
+                    <div class="row">
+                        <div class="six columns">
+                            <label for="authorInput">Author</label>
+                            <input class="u-full-width" type="text" name="author">
+                        </div>
+                        <div class="six columns">
+                            <label for="nationalityInput">Nationality</label>
+                            <input class="u-full-width" type="text" name="nationality">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="six columns">
+                            <label for="birth_dayInput">Birth Day</label>
+                            <input class="u-full-width" type="date" name="birth_day">
+                        </div>
+                        <div class="six columns">
+                            <label for="fieldsInput">Fields</label>
+                            <input class="u-full-width" type="text" name="fields">
+                        </div>
+                    </div>
+                    <input class="button-primary" type="submit" value="Create">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>

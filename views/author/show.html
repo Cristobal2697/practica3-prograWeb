@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- file: views/author/show.html -->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>{{title}}</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/skeleton.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="eleven column" style="margin-top: 10%">
+                <h2>{{title}}</h2>
+                <form>
+                    {{#author}}
+                    <div class="row">
+                        <div class="six columns">
+                            <label for="authorInput">Author</label>
+                            <input class="u-full-width" type="text" readonly id="author" value="{{author}}">
+                        </div>
+                        <div class="six columns">
+                            <label for="nationalityInput">Nationality</label>
+                            <input class="u-full-width" type="text" readonly id="nationality" value="{{nationality}}">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="six columns">
+                            <label for="birth_yearInput">Birth Year</label>
+                            <input class="u-full-width" type="text" readonly id="birth_year" value="{{birth_year}}">
+                        </div>
+                        <div class="six columns">
+                            <label for="fieldsInput">Fields</label>
+                            <input class="u-full-width" type="text" readonly id="fields" value="{{fields}}">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label>Books</label> {{#books}}
+                        <div class="six columns">
+                            <a href="../book/{{id}}"> {{title}}</a>
+                        </div>
+                        {{/books}}
+                        <br>
+                        <h5 style="text-align: end;"><a href="/author">Authors List</a></h5>
+                    </div>
+                    {{/author}}
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
